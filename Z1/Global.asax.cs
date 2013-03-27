@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
-using DotLiquid;
-using DotLiquid.Custom;
+//using DotLiquid;
+//using DotLiquid.Custom;
 
 namespace Z1
 {
@@ -35,8 +35,8 @@ namespace Z1
             RouteTable.Routes.MapHubs();
             RegisterRoutes(RouteTable.Routes);
 
-            Template.RegisterTag<TagTeste>("random");
-            Template.RegisterTag<Loop>("Loop");
+            //Template.RegisterTag<TagTeste>("random");
+            //Template.RegisterTag<Loop>("Loop");
         }
     }
 }

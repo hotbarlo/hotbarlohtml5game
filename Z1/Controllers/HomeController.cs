@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Web.Mvc;
-using DotLiquid;
+//using DotLiquid;
 
 namespace Z1.Controllers
 {
@@ -8,10 +8,11 @@ namespace Z1.Controllers
     {
         public String Index()
         {
-            string text = "";
-            text = " {% Loop 10 %}";
-            Template template = Template.Parse(text);
-            return template.Render(); // => "3"
+            //string text = "";
+            //text = " {% Loop 10 %}";
+            //Template template = Template.Parse(text);
+            //return template.Render(); // => "3"
+            return "";
         }
 
         public ActionResult About()
