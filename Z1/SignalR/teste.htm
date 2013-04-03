@@ -17,7 +17,7 @@
             var xy = oMundo.aHeroi[0].iX + ";" + oMundo.aHeroi[0].iY;
             if (!enviando) {
                 enviando = true;
-                remoto.server.send(xy).done(function () { enviando = true; });
+                remoto.server.send(xy).done(function () { enviando = false; });
                 console.log("Envia: " + xy);
             }
         };
