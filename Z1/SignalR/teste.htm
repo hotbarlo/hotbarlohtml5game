@@ -10,12 +10,16 @@
     <script src="~/signalr/hubs" type="text/javascript"></script>
     <script id="MULTI" type="text/javascript">
         //$.connection.hub.logging = true;
+        var enviando = false;
         var remoto = $.connection.multi;
 
         var fAvisoEnviar = function () {
             var xy = oMundo.aHeroi[0].iX + ";" + oMundo.aHeroi[0].iY;
-            remoto.server.send(xy);
-            console.log("Envia: " + xy);
+            if (!enviando) {
+                enviando = true;
+                remoto.server.send(xy).done(function () { enviando = true; });
+                console.log("Envia: " + xy);
+            }
         };
 
         remoto.client.fAvisoReceber = function (xy) {
